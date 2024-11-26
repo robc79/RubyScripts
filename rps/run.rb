@@ -8,5 +8,16 @@ if __FILE__ == $0
   p1 = Rps::HumanPlayer.new(p1_name)
   p2 = Rps::RandomPlayer.new("CPU")
   g = Rps::Game.new(p1, p2)
-  g.play_game(10)
+  
+  print "How many rounds to play? "
+  raw_count = gets.chomp
+  count = Integer(raw_count, exception: false)
+  
+  while (count == nil || count < 0)
+    print "How many rounds to play? "
+    raw_count = gets.chomp
+    count = Integer(raw_count, exception: false)
+  end
+  
+  g.play_game(count)
 end
