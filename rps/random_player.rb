@@ -13,6 +13,7 @@ module Rps
     end
   
     def record(round)
+      super
     end
   end
 end

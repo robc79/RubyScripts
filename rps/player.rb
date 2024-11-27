@@ -18,7 +18,7 @@ module Rps
     end
 
     def record(round)
-      raise "#{self.class} must implement the method #{__method__}."
+      @history << round
     end
   end
 end

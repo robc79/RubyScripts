@@ -1,12 +1,12 @@
 require_relative 'game'
 require_relative 'human_player'
-require_relative 'random_player'
+require_relative 'trigram_player'
 
 if __FILE__ == $0
   print "Enter your name: "
   p1_name = gets.chomp
   p1 = Rps::HumanPlayer.new(p1_name)
-  p2 = Rps::RandomPlayer.new("CPU")
+  p2 = Rps::TrigramPlayer.new("CPU")
   g = Rps::Game.new(p1, p2)
   
   print "How many rounds to play? "

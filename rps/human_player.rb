@@ -24,7 +24,7 @@ module Rps
     end
   
     def record(round)
-      @history << round
+      super
     end
   end
 end
