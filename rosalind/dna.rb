@@ -3,8 +3,8 @@ require_relative 'sequence_error'
 module Rosalind
   class DnaSequence
     attr_reader :sequence
-    
-    ALPHABET = ['A', 'C', 'G', 'T']
+
+    ALPHABET = ['A', 'C', 'G', 'T'].freeze
   
     def initialize(sequence)
       pattern = /^[ACGT]*$/
@@ -14,6 +14,22 @@ module Rosalind
       end
 
       @sequence = sequence.upcase
+    end
+
+    def count_a
+      @sequence.count('A')
+    end
+
+    def count_c
+      @sequence.count('C')
+    end
+
+    def count_t
+      @sequence.count('T')
+    end
+
+    def count_g
+      @sequence.count('G')
     end
   end
 end
