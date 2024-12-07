@@ -1,4 +1,5 @@
 require_relative 'sequence_error'
+require_relative 'rna'
 
 module Rosalind
   class DnaSequence
@@ -30,6 +31,11 @@ module Rosalind
 
     def count_g
       @sequence.count('G')
+    end
+
+    def to_rna
+      rna = @sequence.gsub('T', 'U')
+      RnaSequence.new(rna)
     end
   end
 end
