@@ -56,7 +56,7 @@ module Rosalind
         compliment << compliment_map[nucleotide]        
       end
 
-      DnaSequence.new(compliment)
+      DnaSequence.new(compliment.reverse)
     end
   end
 end
