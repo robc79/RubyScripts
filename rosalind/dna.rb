@@ -33,6 +33,10 @@ module Rosalind
       @sequence.count('G')
     end
 
+    def count_gc
+      (count_g + count_c) / Float(@sequence.length)
+    end
+
     def to_rna
       rna = @sequence.gsub('T', 'U')
       RnaSequence.new(rna)
