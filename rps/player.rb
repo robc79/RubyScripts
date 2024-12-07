@@ -6,7 +6,7 @@ module Rps
       1 => :rock,
       2 => :paper,
       3 => :scissors
-    }
+  }.freeze
 
     def initialize(name)
       @name = name

@@ -6,7 +6,7 @@ module Rps
       :rock => :paper,
       :paper => :scissors,
       :scissors => :rock
-    }
+  }.freeze
 
     def initialize(name)
       super
