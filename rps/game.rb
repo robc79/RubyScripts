@@ -12,7 +12,7 @@ module Rps
       [:scissors, :paper] => :win,
       [:scissors, :scissors] => :draw,
       [:scissors, :rock] => :lose,
-    }
+  }.freeze
   
     def initialize(p1, p2)
       @p1 = p1
