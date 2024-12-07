@@ -37,5 +37,22 @@ module Rosalind
       rna = @sequence.gsub('T', 'U')
       RnaSequence.new(rna)
     end
+
+    def compliment
+      compliment_map = {
+        'A' => 'T',
+        'T' => 'A',
+        'C' => 'G',
+        'G' => 'C'
+      }
+
+      compliment = ""
+      
+      @sequence.each_char do |nucleotide|
+        compliment << compliment_map[nucleotide]        
+      end
+
+      DnaSequence.new(compliment)
+    end
   end
 end
