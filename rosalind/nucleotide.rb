@@ -30,7 +30,7 @@ module Rosalind
       if comparison.sequence.length != @sequence.length
         raise SequenceError, "Supplied sequence is a different length."
       end
-
+      
       count = 0
 
       @sequence.each_char.with_index do |source_nucleotide, idx|
