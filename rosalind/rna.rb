@@ -1,19 +1,12 @@
 require_relative 'sequence_error'
+require_relative 'nucleotide'
 
 module Rosalind
-  class RnaSequence
-    attr_reader :sequence
+  class RnaSequence < GeneticSequence
+    include Nucleotide
 
-    ALPHABET = ['A', 'C', 'G', 'U'].freeze
-  
     def initialize(sequence)
-      pattern = /^[ACGU]*$/
-      
-      if !sequence.upcase.match? pattern
-        raise SequenceError, "Invalid characters detected."
-      end
-
-      @sequence = sequence.upcase
+      super(sequence, "ACGU")
     end
   end
 end
