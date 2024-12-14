@@ -21,7 +21,7 @@ module Rosalind
         'T' => 'A',
         'C' => 'G',
         'G' => 'C'
-      }
+      }.freeze
 
       compliment = ""
       

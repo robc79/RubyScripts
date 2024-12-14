@@ -1,5 +1,6 @@
 require_relative 'sequence_error'
 require_relative 'nucleotide'
+require_relative 'protein'
 
 module Rosalind
   class RnaSequence < GeneticSequence
@@ -90,7 +91,7 @@ module Rosalind
         end
       end
 
-      protein_sequence
+      Protein.new(protein_sequence)
     end
   end
 end
