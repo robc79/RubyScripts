@@ -9,9 +9,7 @@ if __FILE__ == $0
   p2 = Rps::TrigramPlayer.new("CPU")
   g = Rps::Game.new(p1, p2)
   
-  print "How many rounds to play? "
-  raw_count = gets.chomp
-  count = Integer(raw_count, exception: false)
+  count = nil
   
   while (count == nil || count < 0)
     print "How many rounds to play? "
